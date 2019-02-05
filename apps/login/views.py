@@ -1,9 +1,7 @@
-from django.contrib.auth import login
 from django.utils.encoding import force_text
-from django.utils.http import urlsafe_base64_decode
 from django.conf import settings
-from django.core.mail import send_mailS
-from rest_framework.decorators import api_view, permission_classes
+from django.core.mail import send_mail
+from rest_framework.decorators import permission_classes
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import rest_framework.status as status
@@ -13,11 +11,14 @@ from .models import User
 from .tokens import account_activation_token
 import logging
 
+
 logger = logging.getLogger(__name__)
+
+# Create Profile & Email verification
 
 
 class CreateUserAPIView(APIView):
-    # Any user can create a user
+    # Any new user can create a profile
     permission_classes(AllowAny,)
 
     def post(self, request):
@@ -36,7 +37,7 @@ class CreateUserAPIView(APIView):
 
 
 class VerifyUserAPIView(APIView):
-    # Any user can verify
+    # Any user can verify from an email link
     permission_classes(AllowAny,)
 
     def get(self, request, uidb64, token):
