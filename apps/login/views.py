@@ -1,6 +1,7 @@
 from django.utils.encoding import force_text
 from django.conf import settings
 from django.core.mail import send_mail
+from django.shortcuts import redirect
 from rest_framework.decorators import permission_classes
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -50,7 +51,8 @@ class VerifyUserAPIView(APIView):
         if user and account_activation_token.check_token(user, token):
             user.email_verified = True
             user.save()
-            return Response("User has been verified successfully", status=status.HTTP_200_OK)
+            # Response("User has been verified successfully", status=status.HTTP_200_OK)
+            return redirect("/")
         else:
             return Response("Failed to verify User", status=status.HTTP_400_BAD_REQUEST)
 
