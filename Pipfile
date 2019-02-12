@@ -6,11 +6,12 @@ verify_ssl = true
 [dev-packages]
 
 [packages]
-django = "*"
+django = ">=2.1.6"
 requests = "*"
 djangorestframework = "*"
 django-rest-auth = {extras = ["with_social"],version = "*"}
 djangorestframework-jwt = "*"
+tavern = {extras = ["pytest"],version = "*"}
 
 [requires]
 python_version = "3.6"
