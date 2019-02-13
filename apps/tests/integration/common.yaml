@@ -1,0 +1,16 @@
+name: test includes
+descripton: used for testing against local server
+
+variables:
+  host: http://localhost:8000
+
+stages:
+  - id: typetoken-anything-match
+    name: match top level
+    request:
+      url: "{host}/"
+      method: GET
+    response:
+      status_code: 200
+      body:
+        top: !anything

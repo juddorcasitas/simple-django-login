@@ -2,7 +2,7 @@ from django.utils.encoding import force_text
 from django.conf import settings
 from django.core.mail import send_mail
 from django.shortcuts import redirect
-from rest_framework.decorators import permission_classes
+from rest_framework.decorators import permission_classes, api_view
 from rest_framework.views import APIView
 from rest_framework.response import Response
 import rest_framework.status as status
@@ -17,15 +17,29 @@ logger = logging.getLogger(__name__)
 
 # Create Profile & Email verification
 
+# test route for server status
+@api_view(['GET'])
+@permission_classes([AllowAny])
+def sample_json(request):
+
+    res = {"status": "success",
+           "message": "Looks like the server is up and running"}
+    return Response(res, status=status.HTTP_200_OK)
+
 
 class CreateUserAPIView(APIView):
     # Any new user can create a profile
     permission_classes(AllowAny,)
 
     def post(self, request):
-        user = request.data
-        serializer = UserSerializer(data=user)
-        if serializer.is_valid(raise_exception=True):
+        try:
+            user = request.data
+            serializer = UserSerializer(data=user)
+        except(TypeError, ValueError, OverflowError):
+            user = None
+            serializer = None
+
+        if user and serializer.is_valid(raise_exception=True):
             serializer.save()
             user_obj = User.objects.get_by_natural_key(serializer.data['username'])
             token = account_activation_token.make_token(user_obj)
