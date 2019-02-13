@@ -12,6 +12,10 @@ djangorestframework = "*"
 django-rest-auth = {extras = ["with_social"],version = "*"}
 djangorestframework-jwt = "*"
 tavern = {extras = ["pytest"],version = "*"}
+pyyaml = ">=4.2b1"
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = true
