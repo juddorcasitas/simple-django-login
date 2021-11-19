@@ -36,6 +36,7 @@
                 "sha256:719a74fb9e33b9bd44cc7f3a8d94bc35e4049deebe19ba7d8e108280cfd59830"
             ],
             "version": "==2020.12.5"
+
         },
         "cffi": {
             "hashes": [
@@ -119,11 +120,11 @@
         },
         "django": {
             "hashes": [
-                "sha256:58819ca72a13b963c16383687421261657abe5754aad9ad66166a921dd17559f",
-                "sha256:62644444551e8e6fd36600e741a4d24dd2b4b58acf7bae8847a8da952468d771"
+                "sha256:3339ff0e03dee13045aef6ae7b523edff75b6d726adf7a7a48f53d5a501f7db7",
+                "sha256:f2084ceecff86b1e631c2cd4107d435daf4e12f1efcdf11061a73bf0b5e95f92"
             ],
             "index": "pypi",
-            "version": "==2.2b1"
+            "version": "==2.2.24"
         },
         "django-allauth": {
             "hashes": [
@@ -189,6 +190,7 @@
                 "sha256:b85d0567b8666149a93172712e68920734333c0ce7e89b78b3e987f71e5ed4f9",
                 "sha256:cdf6525904cc597730141d61b36f2e4b8ecc257c420fa2f4549bac2c2d0cb72f"
             ],
+
             "version": "==0.10.0"
         },
         "more-itertools": {
@@ -211,6 +213,7 @@
                 "sha256:5b327ac1320dc863dca72f4514ecc086f31186744b84a230374cc1fd776feae5",
                 "sha256:67714da7f7bc052e064859c05c595155bd1ee9f69f76557e21f051443c20947a"
             ],
+
             "version": "==20.9"
         },
         "paho-mqtt": {
@@ -225,6 +228,7 @@
                 "sha256:b236cde0ac9a6aedd5e3c34517b423cd4fd97ef723849da6b0d2231142d89c00"
             ],
             "version": "==5.5.1"
+
         },
         "pluggy": {
             "hashes": [
@@ -329,6 +333,7 @@
                 "sha256:f3790156c606299ff499ec44db422f66f05a7363b39eb9d5b064f17bd7d7c47b",
                 "sha256:f7a21e3d99aa3095ef0553e7ceba36fb693998fbb1226f1392ce33681047465f",
                 "sha256:fdc6b2cb4b19e431994f25a9160695cc59a4e861710cc6fc97161c5e845fc579"
+
             ],
             "index": "pypi",
             "version": "==5.4"
@@ -345,6 +350,7 @@
             "hashes": [
                 "sha256:7f71572defaecd16372f9006f33c2ec8c077c3cfa6f5911a9a90202beb513f3d",
                 "sha256:b4261601a71fd721a8bd6d7aa1cc1d6a8a93b4a9f5e96626f8e4d91e8beeaa6a"
+
             ],
             "version": "==1.3.0"
         },
@@ -354,6 +360,7 @@
                 "sha256:bb48c514222702878759a05af96f4b7ecdba9b33cd4efcf25c86b882cef3a942"
             ],
             "version": "==0.16.13"
+
         },
         "ruamel.yaml.clib": {
             "hashes": [
@@ -390,6 +397,7 @@
                 "sha256:f6061a31880c1ed6b6ce341215336e2f3d0c1deccd84957b6fa8ca474b41e89f"
             ],
             "markers": "platform_python_implementation == 'CPython' and python_version < '3.10'",
+
             "version": "==0.2.2"
         },
         "six": {
@@ -398,6 +406,7 @@
                 "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"
             ],
             "version": "==1.15.0"
+
         },
         "sqlparse": {
             "hashes": [
@@ -431,6 +440,7 @@
             ],
             "markers": "python_version < '3.8'",
             "version": "==3.7.4.3"
+
         },
         "urllib3": {
             "hashes": [
